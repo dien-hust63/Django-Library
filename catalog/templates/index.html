@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+{% block title %}
+  <title>Home</title>
+{% endblock title %}
+{% block content%}<title>Van Dien</title>
+    <h1>Local Library</h1>
+    <p>Welcome my library</p>
+    <h2>Dynamic content</h2>
+    <ul>
+        <li><strong>Books: </strong>{{ num_books }}</li>
+        <li><strong>Copies: </strong>{{ num_books_instance }}</li>
+        <li><strong>Copies available: </strong>{{ num_available_book }}</li>
+        <li><strong>Authors : </strong>{{ num_authors }}</li>
+        <li><strong>Book_list_code: </strong>{% for book in book_list  %}
+            <ul>{{book.title}}</ul>
+        {% endfor %}</li>
+    </ul>
+    <p>You have visited this page {{num_visits}} time</p>
+  
+{% endblock  %}
